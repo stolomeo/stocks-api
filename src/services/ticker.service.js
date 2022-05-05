@@ -6,11 +6,13 @@ export const insertStock = async (stock) => {
   return insertedId;
 };
 
-export const getStock = async (stock) => {
+export const getStock = async (name) => {
   const col = await getCollection();
   const stock = await col.findOne({ name });
+  return stock;
 };
 export const getStocks = async (stock) => {
   const col = await getCollection();
-  const stock = await col.find({});
+  const stocks = await col.find({});
+  return stocks;
 };
