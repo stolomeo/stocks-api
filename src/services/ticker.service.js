@@ -11,8 +11,14 @@ export const getStock = async (name) => {
   const stock = await col.findOne({ name });
   return stock;
 };
-export const getStocks = async (stock) => {
+
+export const getStocks = async (name) => {
   const col = await getCollection();
   const stocks = await col.find({});
   return stocks;
+};
+
+export const updateStock = async (name, updateObj) => {
+  const col = await getCollection();
+  await col.updateOne({ name }, { set: updateObj });
 };
