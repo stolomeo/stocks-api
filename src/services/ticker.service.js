@@ -22,3 +22,7 @@ export const updateStock = async (name, updateObj) => {
   const col = await getCollection();
   await col.updateOne({ name }, { set: updateObj });
 };
+
+export const deleteStock = async (name) => {
+  await updateStock(name, { deletedAt: new Date() });
+};
