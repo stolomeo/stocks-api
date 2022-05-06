@@ -8,5 +8,5 @@ export const getDb = async () => {
 
 export const getCollection = async () => {
   const col = await getDb();
-  return db.collection("Top 25 Stocks in the S&P 500");
+  return col.collection("Top 25 Stocks in the S&P 500");
 };
