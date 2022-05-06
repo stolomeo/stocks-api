@@ -14,3 +14,9 @@ stockRouter.post("/stocks", async (req, res) => {
   const id = await insertStock(stock);
   res.send(id.toString());
 });
+
+stockRouter.get("/stocks", async (req, res) => {
+  const { name } = req.body;
+  const stock = await getStock(name);
+  res.status(200).send(stock);
+});
