@@ -1,4 +1,4 @@
-import { getCollection } from "../gateway/mongo";
+import { getCollection } from "../gateway/mongo.js";
 
 export const insertStock = async (stock) => {
   const col = await getCollection();
