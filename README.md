@@ -1,3 +1,3 @@
-## Initiating CRUD operations to push and pull from my stocks database.
+## Initiating CRUD operations to push and pull from my collection of my favorite stocks
 
-Technologies used: Mongo, Express, & Node
+Technologies used: Mongo, Express, & Nodejs
